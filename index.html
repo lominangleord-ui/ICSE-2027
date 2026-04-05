@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICSE 2027 – Complete Syllabus</title>
+<style>
+  :root {
+    --primary: #0a6e5c;
+    --primary-light: #e8f5f2;
+    --primary-mid: #0f8c73;
+    --accent: #d4a017;
+    --accent-light: #fff8e6;
+    --dark: #1a1a2e;
+    --text: #2d2d2d;
+    --text-muted: #5a5a6a;
+    --border: #dde4e0;
+    --bg: #f7faf9;
+    --white: #ffffff;
+    --card-shadow: 0 2px 12px rgba(10,110,92,0.08);
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Georgia, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: linear-gradient(135deg, #0a6e5c 0%, #0d5a4a 40%, #1a3a2a 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 40px 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 1px, transparent 0, transparent 50%);
+    background-size: 20px 20px;
+  }
+  .cover-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    padding: 6px 22px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .cover h1 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  .cover h2 {
+    font-size: 19px;
+    font-weight: 400;
+    opacity: 0.85;
+    margin-bottom: 30px;
+  }
+  .cover-meta {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .cover-meta span {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  /* ── TOC ── */
+  .toc {
+    background: white;
+    padding: 40px;
+    border-bottom: 2px solid var(--border);
+  }
+  .toc h2 {
+    font-size: 22px;
+    color: var(--primary);
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-light);
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+  }
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--bg);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s;
+  }
+  .toc-item:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateX(4px);
+  }
+  .toc-num {
+    background: var(--primary);
+    color: white;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* ── CONTENT ── */
+  .container { max-width: 1200px; margin: 0 auto; padding: 40px 30px; }
+
+  /* ── SUBJECT HEADER ── */
+  .subject-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 36px;
+    border-radius: var(--radius);
+    margin-bottom: 30px;
+    margin-top: 50px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .subject-header::after {
+    content: '';
+    position: absolute; right: -20px; top: -20px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+  }
+  .subject-icon {
+    font-size: 36px;
+    flex-shrink: 0;
+  }
+  .subject-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .subject-header p {
+    opacity: 0.85;
+    font-size: 14px;
+  }
+  .subject-code {
+    margin-left: auto;
+    background: rgba(255,255,255,0.2);
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  /* Subject color themes */
+  .bio    { background: linear-gradient(135deg, #1a7a4a, #0d5c38); }
+  .chem   { background: linear-gradient(135deg, #2563a8, #1a4a87); }
+  .phys   { background: linear-gradient(135deg, #7b3fa8, #5c2d87); }
+  .math   { background: linear-gradient(135deg, #c8400a, #a0300a); }
+  .geo    { background: linear-gradient(135deg, #2a7a8a, #1a5c6a); }
+  .hist   { background: linear-gradient(135deg, #8a4a1a, #6a3510); }
+  .pe     { background: linear-gradient(135deg, #1a7a7a, #0d5c5c); }
+
+  /* ── CLASS TABS ── */
+  .class-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .class-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: default;
+  }
+  .class-ix { background: #e8f5e9; color: #1a5c38; border: 1px solid #a5d6a7; }
+  .class-x  { background: #e3f2fd; color: #1a3c6e; border: 1px solid #90caf9; }
+
+  /* ── SECTION CARD ── */
+  .section-card {
+    background: white;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+  }
+  .section-title {
+    padding: 14px 22px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
+  .section-title .arrow {
+    font-size: 12px;
+    transition: transform 0.25s;
+  }
+  .section-title.open .arrow { transform: rotate(180deg); }
+
+  /* Section header colors by subject */
+  .bio .section-title    { background: #1a7a4a; }
+  .chem .section-title   { background: #2563a8; }
+  .phys .section-title   { background: #7b3fa8; }
+  .math-s .section-title { background: #c8400a; }
+  .geo .section-title    { background: #2a7a8a; }
+  .hist .section-title   { background: #8a4a1a; }
+  .pe .section-title     { background: #1a7a7a; }
+
+  .section-body {
+    padding: 20px 24px;
+    display: none;
+  }
+  .section-body.open { display: block; }
+
+  /* ── TOPIC LIST ── */
+  .topic-group {
+    margin-bottom: 18px;
+  }
+  .topic-group h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+    padding-left: 10px;
+    border-left: 3px solid var(--primary);
+  }
+  .topic-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .topic-group ul li {
+    font-size: 13.5px;
+    color: var(--text);
+    padding: 4px 0 4px 18px;
+    position: relative;
+    border-bottom: 1px dotted #eee;
+  }
+  .topic-group ul li:last-child { border-bottom: none; }
+  .topic-group ul li::before {
+    content: '›';
+    position: absolute; left: 4px;
+    color: var(--primary);
+    font-weight: 700;
+  }
+  .sub-list {
+    padding-left: 20px !important;
+    margin-top: 4px;
+  }
+  .sub-list li { font-size: 13px !important; color: var(--text-muted) !important; }
+  .sub-list li::before { content: '·' !important; color: #aaa !important; }
+
+  /* ── MARKS BOX ── */
+  .marks-box {
+    background: var(--accent-light);
+    border: 1px solid #e8c94a;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .marks-box strong { color: var(--accent); font-size: 15px; }
+
+  /* ── INFO GRID ── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .info-cell {
+    background: var(--primary-light);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 13px;
+    border: 1px solid #b2d8d0;
+  }
+  .info-cell strong { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary); margin-bottom: 4px; }
+
+  /* ── GAME CARD ── */
+  .game-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .game-title {
+    background: #f0f4f8;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark);
+    border-bottom: 1px solid var(--border);
+  }
+  .game-body { padding: 14px 16px; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    border: none;
+    border-top: 2px dashed var(--border);
+    margin: 32px 0;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    .section-body { display: block !important; }
+    .cover { break-after: page; }
+    .subject-header { break-before: page; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+  @media (max-width: 640px) {
+    .cover h1 { font-size: 28px; }
+    .container { padding: 20px 16px; }
+    .toc { padding: 24px 16px; }
+    .subject-header { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-badge">CISCE Official Curriculum</div>
+  <h1>ICSE Examination 2027</h1>
+  <h2>Complete Syllabus – Classes IX & X</h2>
+  <div class="cover-meta">
+    <span>📚 7 Subjects</span>
+    <span>🏫 Classes IX & X</span>
+    <span>📅 Examination Year: 2027</span>
+    <span>🏛️ Council: CISCE, New Delhi</span>
+  </div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <h2>Table of Contents</h2>
+  <div class="toc-grid">
+    <a class="toc-item" href="#biology"><div class="toc-num">1</div><span>Science – Biology (52, Paper 3)</span></a>
+    <a class="toc-item" href="#chemistry"><div class="toc-num">2</div><span>Science – Chemistry (52, Paper 2)</span></a>
+    <a class="toc-item" href="#physics"><div class="toc-num">3</div><span>Science – Physics (52, Paper 1)</span></a>
+    <a class="toc-item" href="#mathematics"><div class="toc-num">4</div><span>Mathematics (51)</span></a>
+    <a class="toc-item" href="#geography"><div class="toc-num">5</div><span>H.C.G. – Geography (50, Paper 2)</span></a>
+    <a class="toc-item" href="#history"><div class="toc-num">6</div><span>H.C.G. – History & Civics (50, Paper 1)</span></a>
+    <a class="toc-item" href="#pe"><div class="toc-num">7</div><span>Physical Education (72)</span></a>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- BIOLOGY -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="biology">
+  <div class="subject-header bio">
+    <div class="subject-icon">🧬</div>
+    <div>
+      <h2>Science (52) – Biology</h2>
+      <p>Science Paper 3 &nbsp;|&nbsp; ICSE 2027</p>
+    </div>
+    <div class="subject-code">Code 52</div>
+  </div>
+
+  <!-- Class IX Biology -->
+  <div class="class-tabs">
+    <span class="class-label class-ix">Class IX</span>
+  </div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 2 Hours</div>
+    <div>Internal Assessment (Practical): <strong>20 Marks</strong></div>
+  </div>
+
+  <!-- 1 Basic Biology -->
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">1. Basic Biology <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i) The Cell</h4>
+        <ul>
+          <li>Cell as unit of life; protoplasm</li>
+          <li>Prokaryotic vs eukaryotic cells – major differences</li>
+          <li>Plant cell vs animal cell (cell wall, centrosome, vacuoles, plastids)</li>
+          <li>Cell theory – basic understanding</li>
+          <li>Cell organelles and functions: Protoplasm, Cytoplasm, Cell Wall, Cell Membrane, Nucleus, Nucleolus, Mitochondria, Endoplasmic Reticulum, Ribosome, Golgi bodies, Plastids, Lysosomes, Centrosome, Vacuole</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(ii) Tissues</h4>
+        <ul>
+          <li>Types of plant and animal tissues</li>
+          <li>Location, basic structure and functions with examples</li>
+          <li>Role in different physiological processes in plants and animals</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 Flowering Plants -->
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">2. Flowering Plants <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i) Flower Structure</h4>
+        <ul>
+          <li>Structure of a bisexual flower; functions of various parts</li>
+          <li>Complete and incomplete flowers</li>
+          <li>Essential and non-essential whorls; various parts and functions</li>
+          <li>Inflorescence and placentation (meaning only)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(ii) Pollination</h4>
+        <ul>
+          <li>Self and cross-pollination – explanation, advantages and disadvantages</li>
+          <li>Agents of pollination: insects, wind, water – characteristic features of flowers</li>
+          <li>How nature favours cross-pollination</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iii) Fertilisation</h4>
+        <ul>
+          <li>Events between pollination and fertilisation; zygote formation in embryo sac</li>
+          <li>Double fertilization and triple fusion</li>
+          <li>Fruit and Seed – definition and significance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 Plant Physiology IX -->
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">3. Plant Physiology <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i) Seeds & Germination</h4>
+        <ul>
+          <li>Structure of dicot and monocot seeds; germination types and conditions</li>
+          <li>Structure and germination of Bean seed and Maize grain</li>
+          <li>Differences between monocot and dicot seeds</li>
+          <li>Differences between hypogeal and epigeal germination</li>
+          <li>Conditions for seed germination (experiments)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(ii) Respiration in Plants</h4>
+        <ul>
+          <li>Outline of the process; gaseous exchange</li>
+          <li>Glycolysis and Krebs cycle – brief outline and significance</li>
+          <li>Aerobic and anaerobic respiration – chemical equations</li>
+          <li>Experiments on gaseous exchange and heat production</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 Diversity -->
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">4. Diversity in Living Organisms <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i) Five Kingdom Classification</h4>
+        <ul>
+          <li>Main characteristics of each kingdom with examples</li>
+          <li>Monera, Protista, Fungi</li>
+          <li>Plantae: Thallophyta, Bryophyta, Pteridophyta, Spermatophyta</li>
+          <li>Animalia: Non-chordates (Porifera to Echinodermata); Chordates – all five classes</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(ii) Economic Importance of Bacteria</h4>
+        <ul>
+          <li>Useful: Medicine (antibiotics, serums, vaccines), Agriculture (nitrogen cycle: nitrogen fixing, nitrifying, denitrifying bacteria), Industry (curing of tea, tanning of leather)</li>
+          <li>Harmful: spoilage of food, diseases in plants and animals, bio-weapons</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iii) Economic Importance of Fungi</h4>
+        <ul>
+          <li>Useful role: breweries, bakeries, cheese processing, mushroom cultivation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 Human Anatomy IX -->
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">5. Human Anatomy and Physiology <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(a) Nutrition</h4>
+        <ul>
+          <li>Classes of food; balanced diet; malnutrition and deficiency diseases</li>
+          <li>Functions of carbohydrates, fats, proteins, mineral salts (calcium, iodine, iron, sodium), vitamins and water</li>
+          <li>Sources of vitamins, functions and deficiency diseases</li>
+          <li>Meaning and importance of balanced diet; role of cellulose</li>
+          <li>Kwashiorkor and Marasmus – causes, symptoms and prevention</li>
+          <li>Structure of a tooth; functions of different types of teeth; dental formula of an adult</li>
+          <li>Digestive system: organs, glands, enzymes; digestion, absorption and assimilation; peristalsis</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(b) Skeleton – Movement and Locomotion</h4>
+        <ul>
+          <li>Functions of human skeleton; Axial and Appendicular Skeleton</li>
+          <li>Types of joints: immovable, slightly movable, freely movable (hinge, ball and socket, gliding, pivot)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(c) Structure and Functions of Skin</h4>
+        <ul>
+          <li>Various parts and their functions</li>
+          <li>Special derivatives: sweat glands, sebaceous glands, hair, nails, mammary glands</li>
+          <li>Heat regulation – vasodilation and vasoconstriction</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(d) Respiratory System</h4>
+        <ul>
+          <li>Structures of the respiratory system</li>
+          <li>Differences between anaerobic respiration in plants and man</li>
+          <li>Role of diaphragm and intercostal muscles in breathing</li>
+          <li>Gaseous transport and tissue respiration; respiratory volumes</li>
+          <li>Effect of altitude on breathing; asphyxiation and hypoxia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 Health & Hygiene -->
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">6. Health and Hygiene <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i–ii) Introduction & Disease Types</h4>
+        <ul>
+          <li>Personal hygiene, public hygiene and sanitation</li>
+          <li>Communicable, non-communicable, endemic, epidemic, pandemic, sporadic – meaning with examples</li>
+          <li>Modes of transmission: airborne, waterborne, vectors (housefly, mosquito, cockroach)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iii) Diseases (Symptoms & Control)</h4>
+        <ul>
+          <li>Bacterial: Cholera, Typhoid, Tuberculosis</li>
+          <li>Viral: AIDS, Chickenpox, Hepatitis</li>
+          <li>Protozoan: Malaria, Amoebic Dysentery, Sleeping Sickness</li>
+          <li>Helminthic: Ascariasis, Taeniasis, Filariasis</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iv–v) Aids to Health & Organisations</h4>
+        <ul>
+          <li>Active and passive immunity</li>
+          <li>Vaccination, immunization, antitoxin, serum, antiseptics, disinfectants, antibiotics</li>
+          <li>Local defense system; difference between antiseptics and disinfectants</li>
+          <li>Red Cross and WHO – major activities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 Waste Management IX -->
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">7. Waste Generation and Management <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:var(--primary);font-weight:700">›</span>Domestic, industrial, agricultural, commercial, municipal sewage, e-waste</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:var(--primary);font-weight:700">›</span>Methods: segregation, dumping, composting, drainage, treatment of effluents, incineration, scrubbers, electrostatic precipitators</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:var(--primary);font-weight:700">›</span>Biodegradable vs non-biodegradable segregation; sewage treatment plants</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Class X Biology -->
+  <div class="class-tabs" style="margin-top:30px">
+    <span class="class-label class-x">Class X</span>
+  </div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 2 Hours</div>
+    <div>Internal Assessment (Practical): <strong>20 Marks</strong></div>
+  </div>
+
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">1. Basic Biology – Cell Cycle, Chromosome & Genetics <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i) Cell Cycle and Cell Division</h4>
+        <ul>
+          <li>Cell cycle: Interphase (G1, S, G2) and Mitotic phase</li>
+          <li>Mitosis and its stages</li>
+          <li>Meiosis as a reduction division (stages not required)</li>
+          <li>Homologous chromosomes, crossing over and variations</li>
+          <li>Significance and major differences between mitotic and meiotic division</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(ii) Structure of Chromosome</h4>
+        <ul>
+          <li>Basic structure: chromatin, chromatid, gene structure of DNA, centromere</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iii) Genetics</h4>
+        <ul>
+          <li>Mendel's three laws of inheritance</li>
+          <li>Monohybrid cross – phenotype and genotype; Dihybrid cross – phenotype only</li>
+          <li>Terms: gene, allele, heterozygous, homozygous, dominant, recessive, mutation, variation, phenotype, genotype</li>
+          <li>Sex determination in human beings</li>
+          <li>Sex-linked inheritance: haemophilia and colour blindness (X-linked only)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">2. Plant Physiology (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i) Absorption and Osmosis</h4>
+        <ul>
+          <li>Imbibition, diffusion, osmosis; osmotic pressure, root pressure; turgidity and flaccidity</li>
+          <li>Plasmolysis and deplasmolysis; active and passive transport</li>
+          <li>Rise of water up to the xylem; forces responsible for ascent of sap</li>
+          <li>Structure of a single full-grown root hair; cohesive and adhesive forces; transpirational pull</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(ii) Transpiration</h4>
+        <ul>
+          <li>Process and significance; Ganong's potometer and limitations</li>
+          <li>Factors affecting rate of transpiration; experiments on transpiration</li>
+          <li>Mechanism of stomatal transpiration – potassium ion exchange theory</li>
+          <li>Adaptations to reduce transpiration; guttation and bleeding</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iii) Photosynthesis</h4>
+        <ul>
+          <li>Process and significance; balanced chemical equation</li>
+          <li>Internal structure of chloroplast; site of light and dark reactions</li>
+          <li>Opening and closing of stomata – potassium ion exchange theory</li>
+          <li>Light reaction (photochemical): activation of chlorophyll, photolysis of water, O₂ release, ATP formation, NADPH</li>
+          <li>Dark reaction (biosynthetic): CO₂ + hydrogen → glucose (no detailed equations)</li>
+          <li>Adaptations in plants for photosynthesis; experiments on photosynthesis</li>
+          <li>Carbon cycle – diagrammatic representation</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iv) Chemical Coordination in Plants</h4>
+        <ul>
+          <li>Plant growth regulators: Auxins, Gibberellins, Cytokinins, Abscisic acid, Ethylene</li>
+          <li>Tropic movements: Phototropism, Geotropism, Hydrotropism, Thigmotropism, Chemotropism</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">3. Human Anatomy and Physiology (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i) Circulatory System</h4>
+        <ul>
+          <li>Composition of blood – structure and functions of RBC, WBC, platelets</li>
+          <li>Tissue fluid and lymph; blood coagulation</li>
+          <li>Structure and working of the heart; main blood vessels entering/leaving heart, liver and kidney</li>
+          <li>Systole and diastole; double circulation; pulse and blood pressure</li>
+          <li>Blood vessels: artery, vein, capillary – structure and function</li>
+          <li>Lymphatic organs: spleen and tonsils</li>
+          <li>ABO blood group system, Rh factor; hepatic portal system</li>
+          <li>Efficiency of mammalian RBCs due to absence of certain organelles</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(ii) Excretory System</h4>
+        <ul>
+          <li>Different excretory organs in the human body</li>
+          <li>External and internal structure of kidney; parts of urinary system</li>
+          <li>Blood vessels entering/leaving kidney; functions of urinary system parts</li>
+          <li>Structure and function of nephron; ultra-filtration (malpighian capsule); selective reabsorption; tubular secretion</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iii) Nervous System</h4>
+        <ul>
+          <li>Parts of a neuron; structure of the brain: Medulla Oblongata, Cerebrum, Cerebellum, Thalamus, Hypothalamus, Pons</li>
+          <li>White and gray matter in brain and spinal cord</li>
+          <li>Voluntary and involuntary actions; reflex arc; peripheral and autonomic nervous system</li>
+          <li>Natural and acquired reflex; differences</li>
+          <li>Eye – external and internal structure, functions, stereoscopic vision, adaptation, accommodation; defects: myopia, hypermetropia, presbyopia, astigmatism, cataract</li>
+          <li>Ear – structure and functions; course of perception of sound; role in balance</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iv) Endocrine System</h4>
+        <ul>
+          <li>Endocrine vs exocrine glands; location and shape of endocrine glands</li>
+          <li>Pancreas: insulin, glucagon; Thyroid: thyroxin; Adrenal: cortical hormones, adrenaline; Pituitary: growth hormone, tropic hormones, ADH, oxytocin</li>
+          <li>Hypo- and hypersecretion effects; feedback mechanism (TSH)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(v) Reproductive System</h4>
+        <ul>
+          <li>Male and female reproductive organs; male accessory glands; secondary sexual characters</li>
+          <li>Structure and functions of sperm and egg</li>
+          <li>Fertilization, implantation, placenta, gestation, parturition</li>
+          <li>Role of placenta in nutrition, respiration, excretion; endocrinal function</li>
+          <li>Foetal membranes and amniotic fluid; menstrual cycle outline</li>
+          <li>Sex hormones: Testosterone, Oestrogen, Progesterone</li>
+          <li>Identical and fraternal twins – meaning and differences</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">4. Population | 5. Human Evolution | 6. Pollution (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>4. Population</h4>
+        <ul>
+          <li>Population explosion; reasons; demography, density, birth/death/growth rate</li>
+          <li>Problems: unemployment, overexploitation, low per capita income, price rise, pollution, unequal wealth</li>
+          <li>Population control – Tubectomy and Vasectomy</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>5. Human Evolution</h4>
+        <ul>
+          <li>Human ancestors: Australopithecus, Homo habilis, Homo erectus, Neanderthals, Cro-Magnon, Homo sapiens sapiens – characteristics (bipedalism, cranial capacity, canine size, forehead, chin, body hair, height/posture)</li>
+          <li>Lamarck's theory – use and disuse of organs; vestigial organs</li>
+          <li>Darwin's natural selection – survival of the fittest; peppered moth adaptation</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>6. Pollution</h4>
+        <ul>
+          <li>Types and sources: Air (vehicular, industrial), Water (detergents, sewage, oil spills), Thermal, Soil (industrial/commercial waste, fertilizers), Biomedical, Radiation, Noise</li>
+          <li>Biodegradable and Non-biodegradable wastes – meaning and examples (DDT, plastics)</li>
+          <li>Effects: Greenhouse effect, Global warming, Acid rain, Ozone depletion</li>
+          <li>Control: unleaded petrol/CNG, social forestry, sewage treatment, ban on plastics, organic farming, Euro Bharat standard, Swachh Bharat Abhiyan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card bio">
+    <div class="section-title" onclick="toggle(this)">Practical Work – Internal Assessment (Both Classes) <span class="arrow">▼</span></div>
+    <div class="section-body">
+      <div class="topic-group">
+        <h4>Class IX – Plant Life</h4>
+        <ul>
+          <li>Onion peel under microscope; cross-pollinated flower (e.g. Hibiscus); germinating bean seed and maize grain</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>Class IX – Animal Life</h4>
+        <ul>
+          <li>Human cheek cell; identification of sugar, starch, protein, fat; specimens of Non-Chordata and Chordata; lung and skin structure; mechanism of breathing (Bell jar); waste disposal visits</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>Class X – Plant Life</h4>
+        <ul>
+          <li>Permanent slides of mitosis stages; diffusion (KMnO₄); osmosis (Thistle Funnel, potato); absorption; transpiration (Bell jar, cobalt chloride paper, Ganong's potometer); photosynthesis experiments (light, CO₂, chlorophyll, O₂ using hydrilla/elodea)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>Class X – Animal Life</h4>
+        <ul>
+          <li>Structures of urinary system, heart, kidney, brain (models/charts); blood cells identification; ear and eye (models); endocrine glands identification</li>
+        </ul>
+      </div>
+      <div class="marks-box" style="margin-top:12px">
+        <div>Internal Examiner: <strong>10 Marks</strong></div>
+        <div>External Examiner: <strong>10 Marks</strong></div>
+        <div>Total: <strong>20 Marks</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- CHEMISTRY -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="chemistry">
+  <div class="subject-header chem">
+    <div class="subject-icon">⚗️</div>
+    <div>
+      <h2>Science (52) – Chemistry</h2>
+      <p>Science Paper 2 &nbsp;|&nbsp; ICSE 2027</p>
+    </div>
+    <div class="subject-code">Code 52</div>
+  </div>
+
+  <div class="class-tabs"><span class="class-label class-ix">Class IX</span></div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 2 Hours</div>
+    <div>Internal Assessment: <strong>20 Marks</strong></div>
+    <div><em>Note: All reactions studied with reference to reactants, products, conditions, observations, balanced equations and diagrams</em></div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">1. The Language of Chemistry <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Symbols, valency (mono, di, tri, tetra valent), radicals (formulae and valencies), compound formulae</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Chemical equations – definitions, balancing by hit and trial method</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Relative Atomic and Molecular Masses (H or 1/12th of C-12 standard); calculation of molecular mass and percentage composition</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">2. Chemical Changes and Reactions <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Types: Direct combination, Decomposition, Displacement, Double decomposition (with equations)</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Energy changes: Exothermic and endothermic reactions – evolution/absorption of heat, light, electricity</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">3. Water <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>Water as a Universal Solvent</h4>
+        <ul>
+          <li>Solutions as mixtures; saturated solutions; effect of temperature on solubility</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>Hydrated and Anhydrous Substances</h4>
+        <ul>
+          <li>Water of crystallisation; anhydrous substances</li>
+          <li>Properties: Efflorescence, Deliquescence, Hygroscopy</li>
+          <li>Removal of hardness: by boiling, by washing soda</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>Drying Agents; Soft and Hard Water</h4>
+        <ul>
+          <li>Meaning and examples of drying and dehydrating agents</li>
+          <li>Soft vs hard water (action of soap); types and causes of hardness</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">4. Atomic Structure and Chemical Bonding (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i) Structure of an Atom</h4>
+        <ul>
+          <li>Nucleus (protons, neutrons), electrons; mass number, atomic number</li>
+          <li>Electron distribution in orbits (2n² rule), Octet rule</li>
+          <li>Isotopes – definition and examples (H, C, Cl)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(ii) Electrovalent and Covalent Bonding</h4>
+        <ul>
+          <li>Electrovalent bond: definition, atomic orbit structure (NaCl, MgCl₂, CaO)</li>
+          <li>Covalent bond: definition, atomic orbit structure (H₂, Cl₂, O₂, N₂, HCl, H₂O, NH₃, CCl₄, CH₄)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">5. The Periodic Table (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Döbereiner's Triads, Newland's law of Octaves, Mendeleev's periodic law</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Atomic number and Modern Periodic Law; Modern Periodic Table (Groups 1–18, Periods 1–7)</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Alkali metals (Grp 1), Alkaline Earth metals (Grp 2), Halogens (Grp 17), Zero Group (Grp 18)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">6. Study of Hydrogen <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i) Hydrogen from Water, Acids, Alkalis</h4>
+        <ul>
+          <li>Action of cold water on Na, K, Ca; hot water on Mg; steam on Al, Zn, Fe, C (reversibility with iron)</li>
+          <li>Displacement from dilute H₂SO₄ / HCl on Mg, Al, Zn, Fe; reasons for not using dilute HNO₃</li>
+          <li>Action of NaOH / KOH on Al, Zn, Pb</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(ii–iv) Preparation, Manufacture, Oxidation-Reduction</h4>
+        <ul>
+          <li>Laboratory preparation using zinc; impurities and their removal</li>
+          <li>Bosch process – main reactions, conditions, separation of CO₂ and CO</li>
+          <li>Oxidation and reduction – in terms of addition/removal of oxygen/hydrogen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">7. Study of Gas Laws <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Behaviour of gases under temperature/pressure; molecular motion explanation</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Boyle's Law and Charles' Law – statement, mathematical form, simple calculations</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Absolute zero; Kelvin scale; gas equation P₁V₁/T₁ = P₂V₂/T₂</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Celsius ↔ Kelvin conversion; Standard Temperature and Pressure</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">8. Atmospheric Pollution (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Acid rain – composition, causes (sulphur in fossil fuels, oxides of N from furnaces/engines), impact on soil and water</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Global warming – greenhouse gases (H₂O vapour, CO₂, CH₄, oxides of N) – sources and reduction methods</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Ozone depletion – ozone formation, function in atmosphere, chemicals responsible (names only; reactions not required)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Class X Chemistry -->
+  <div class="class-tabs" style="margin-top:30px"><span class="class-label class-x">Class X</span></div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 2 Hours</div>
+    <div>Internal Assessment: <strong>20 Marks</strong></div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">1. Periodic Properties (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Definitions and trends in groups and periods: atomic size, metallic character, non-metallic character, ionisation potential, electron affinity, electronegativity</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Modern periodic table up to period 4 (up to Calcium); periodicity based on nuclear charge and shells</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Special reference to alkali metals and halogen groups</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">2. Chemical Bonding (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(a) Electrovalent</h4>
+        <ul>
+          <li>Electron dot structure: NaCl, MgCl₂, CaO</li>
+          <li>Characteristic properties: state, melting/boiling points, conductivity, dissociation in solution and molten state (linked to electrolysis)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(b) Covalent</h4>
+        <ul>
+          <li>Electron dot structure; non-polar (H₂, Cl₂, O₂, N₂, CCl₄, CH₄) and polar (HCl, NH₃, H₂O) compounds</li>
+          <li>Characteristic properties; comparison of electrovalent and covalent compounds</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(c) Coordinate Bond</h4>
+        <ul>
+          <li>Definition; lone pair effect of oxygen (water) and nitrogen (ammonia) forming H₃O⁺, OH⁻, NH₄⁺ (with electron dot diagrams)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">3. Acids, Bases and Salts (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Simple definitions; characteristic properties; ions in mineral acids, alkalis, salts</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Acid-base indicators (litmus, methyl orange, phenolphthalein); pH paper; pH scale</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Types of salts: normal, acid, basic, complex</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Action of dilute acids on salts: hydrogen carbonates, carbonates, sulphites, sulphides</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Preparation of normal salts: direct combination, displacement, precipitation, neutralization, action on carbonates and bicarbonates</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">4. Analytical Chemistry <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Action of NaOH and NH₄OH on solutions of Fe, Cu, Zn, Pb salts – colour and hydroxide precipitates</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Special action of NH₄OH on copper salts; NaOH on ammonium salts</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Action of alkalis (NaOH, KOH) on Al, Zn, Pb – their oxides and hydroxides (amphoteric nature)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">5. Mole Concept and Stoichiometry <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Gay Lussac's Law of Combining Volumes; Avogadro's Law and molar volume (22.4 L at STP)</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Atomicity of H₂, O₂, N₂, Cl₂; Vapour density – relation to relative molecular mass (M = 2×VD)</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Empirical and molecular formula from percentage composition and masses</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Mole and its relation to mass, volume, Avogadro's number; calculations based on chemical equations</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">6. Electrolysis <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Electrolytes and non-electrolytes; strong and weak electrolytes</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Electrolysis: terms – electrolyte, electrode, anode, cathode, anion, cation, oxidation, reduction (loss/gain of electrons)</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Migration of ions; selective discharge theory; electrolysis of: molten PbBr₂, acidified water (Pt), aqueous CuSO₄ (Cu and Pt electrodes)</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Applications: electroplating (Ni, Ag – electrolytes and electrodes); electro-refining of copper</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">7. Metallurgy <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Mineral and ore; common ores of iron, aluminium, zinc</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Stages: Pulverization/dressing (hydraulic, magnetic, froth flotation); roasting and calcination; reduction of metallic oxides (by H₂, C, CO); active metals by electrolysis</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Extraction of aluminium: Baeyer's process (chemical purification); Hall-Heroult process (electrolytic extraction – cell structure, electrode reactions)</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2563a8;font-weight:700">›</span>Alloy and Amalgam: composition and uses of stainless steel, magnalium, duralumin, brass, bronze, fuse metal/solder</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">8. Study of Compounds – HCl, Ammonia, HNO₃, H₂SO₄ <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>A. Hydrogen Chloride</h4>
+        <ul>
+          <li>Preparation from NaCl; density, solubility (fountain experiment); reaction with ammonia; acidic properties; aqua regia; precipitation reactions with AgNO₃ and Pb(NO₃)₂; tests</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>B. Ammonia</h4>
+        <ul>
+          <li>Lab preparation from NH₄Cl; from nitrides (Mg₃N₂, AlN) and ammonium salts</li>
+          <li>Haber's process – manufacture; density and solubility (fountain experiment)</li>
+          <li>Reactions: burning in O₂; catalytic oxidation; with HCl; with hot CuO, PbO₂, Cl₂; aqueous solution reactions with acids, Fe, Cu, Pb, Zn salts</li>
+          <li>Uses: fertilizers, explosives, HNO₃, refrigerant; tests</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>C. Nitric Acid</h4>
+        <ul>
+          <li>Lab preparation from KNO₃ or NaNO₃; Ostwald's process (equations with conditions)</li>
+          <li>As oxidizing agent: reactions with Cu, C, S; acidic properties; tests</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>D. Sulphuric Acid</h4>
+        <ul>
+          <li>Contact process (equations with conditions)</li>
+          <li>Dilute: reactions with metals, metal oxides, hydroxides, carbonates, sulphites, sulphides</li>
+          <li>Concentrated: oxidizing agent (C, S); dehydrating agent (sugar, CuSO₄ crystals); non-volatile nature; dibasic acid; tests</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card chem">
+    <div class="section-title" onclick="toggle(this)">9. Organic Chemistry <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i–iv) Introduction, Structure, Isomerism, Nomenclature</h4>
+        <ul>
+          <li>Unique nature of carbon: tetravalency, catenation</li>
+          <li>Single, double, triple bonds; straight chain, branched chain, cyclic (benzene structure)</li>
+          <li>Structural formulae for alkanes, alkenes, alkynes up to 5 carbon atoms; isomerism (chain, position)</li>
+          <li>Homologous series; IUPAC and trivial names for functional groups (halides, double/triple bond, alcohol, aldehyde, carboxylic, ketone, ether, ester)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(v) Hydrocarbons</h4>
+        <ul>
+          <li>Alkanes: general formula; methane (greenhouse gas) and ethane – preparation from sodium ethanoate, sodium propanoate, iodomethane, bromoethane; complete and incomplete combustion; reaction with Cl₂ (substitution)</li>
+          <li>Alkenes (double bond); ethene – preparation by dehydrohalogenation and dehydration; addition reactions with H₂, Cl₂, Br₂, I₂</li>
+          <li>Alkynes (triple bond); ethyne – preparation from CaC₂ and 1,2-dibromoethane; addition reactions</li>
+          <li>Uses of methane, ethane, ethene, ethyne</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(vi) Ethanol</h4>
+        <ul>
+          <li>Preparation by hydrolysis of alkyl halide</li>
+          <li>Physical and chemical properties: combustion, action with Na, ester formation, dehydration</li>
+          <li>Denatured/methylated spirit; uses</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(vii) Acetic Acid</h4>
+        <ul>
+          <li>Structure; physical properties (odour, glacial acetic acid); chemical properties (litmus, alkalis, esterification); uses</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHYSICS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="physics">
+  <div class="subject-header phys">
+    <div class="subject-icon">🔭</div>
+    <div>
+      <h2>Science (52) – Physics</h2>
+      <p>Science Paper 1 &nbsp;|&nbsp; ICSE 2027</p>
+    </div>
+    <div class="subject-code">Code 52</div>
+  </div>
+
+  <div class="class-tabs"><span class="class-label class-ix">Class IX</span></div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 2 Hours</div>
+    <div>Internal Assessment: <strong>20 Marks</strong></div>
+    <div><em>SI units only unless otherwise specified</em></div>
+  </div>
+
+  <div class="section-card phys">
+    <div class="section-title" onclick="toggle(this)">1. Measurements and Experimentation <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>SI units with correct symbols; fps and cgs systems</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Vernier callipers and micrometer screw gauge (least count, zero error – no numerical problems)</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Simple pendulum: time period, frequency, l vs T² graph, slope, formula T = 2π√(l/g) (no derivation); numerical problems</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card phys">
+    <div class="section-title" onclick="toggle(this)">2. Motion in One Dimension <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Scalar and vector quantities; distance, displacement, speed, velocity, acceleration, retardation</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Distance-time and velocity-time graphs; meaning of slope</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Equations of uniformly accelerated motion (derived): v=u+at; S=ut+½at²; S=½(u+v)t; v²=u²+2aS (Snth not included)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card phys">
+    <div class="section-title" onclick="toggle(this)">3. Laws of Motion <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Contact forces (frictional, normal, tension, collision) and non-contact forces (gravitational, electric, magnetic); cgs and SI units</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Newton's 1st Law – inertia, mass and force; examples of inertia</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Newton's 2nd Law – linear momentum; F = Δp/Δt = ma; weight and mass</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Newton's 3rd Law – action-reaction pairs (qualitative)</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Gravitation: Universal Law (statement and equation); gravity; free fall; gravitational units of force (problems on variation excluded)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card phys">
+    <div class="section-title" onclick="toggle(this)">4. Fluids <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Thrust and pressure; p = hρg; Pascal's law; atmospheric pressure; variation with altitude</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Buoyancy; upthrust; Archimedes' principle; Relative Density; floatation (ρ₁/ρ₂ = V₂/V₁); applications (ship, submarine, iceberg, balloon)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card phys">
+    <div class="section-title" onclick="toggle(this)">5. Heat and Energy <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Heat as energy; SI unit joule; 1 cal = 4.186 J</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Anomalous expansion of water (0–10°C); Hope's experiment; consequences</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Energy flow – laws of thermodynamics (energy conservation and efficiency)</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Energy sources: solar, wind, water, nuclear; renewable vs non-renewable; biogas, tidal, run-of-river; economic viability</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Global warming and Greenhouse effect – meaning, causes, impact, projections; energy degradation</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card phys">
+    <div class="section-title" onclick="toggle(this)">6. Light (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Reflection: laws (experimental verification); images in parallel and perpendicular plane mirrors; uses of plane mirrors</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Spherical mirrors (concave and convex): centre and radius of curvature, pole, principal axis, focus, focal length; ray diagrams for all positions; f = R/2; sign convention; mirror formula (no derivation); uses (scale drawing not required)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card phys">
+    <div class="section-title" onclick="toggle(this)">7. Sound (Class IX) &nbsp;&amp;&nbsp; 8. Electricity and Magnetism (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>7. Sound</h4>
+        <ul>
+          <li>Nature of sound waves; medium requirement; propagation and speed in different media; V = fλ; factors affecting speed; thunder and lightning</li>
+          <li>Infrasonic, sonic, ultrasonic frequencies – applications; difference between ultrasonic and supersonic</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>8. Electricity and Magnetism</h4>
+        <ul>
+          <li>Simple electric circuit; current (rate of flow of charge); potential difference V = W/q; insulators and conductors; direction of current (electron flow and conventional)</li>
+          <li>Induced magnetism; magnetic field of earth; neutral points; lines of magnetic field; compass; bar magnet along magnetic N–S</li>
+          <li>Electromagnet and its uses</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class X Physics -->
+  <div class="class-tabs" style="margin-top:30px"><span class="class-label class-x">Class X</span></div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 2 Hours</div>
+    <div>Internal Assessment: <strong>20 Marks</strong></div>
+  </div>
+
+  <div class="section-card phys">
+    <div class="section-title" onclick="toggle(this)">1. Force, Work, Power and Energy (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Turning forces; moment/torque; equilibrium (translational and rotational); principle of moments; centre of gravity</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Uniform circular motion; centrifugal vs centripetal force</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Work W = FS cosθ; W = mgh; energy types; units (erg, cal, kWh, eV); Power P = W/t; kW, MW, GW, horsepower</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Potential energy U = mgh (derived); kinetic energy K = ½mv² (derived); translational, rotational, vibrational KE</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Machines: effort, load, MA = L/E, VR, efficiency η; MA < VR; levers (1st, 2nd, 3rd class, examples in human body); pulley systems (single fixed, single movable, block and tackle)</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Principle of conservation of energy; U + K = constant (freely falling body); simple pendulum application</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card phys">
+    <div class="section-title" onclick="toggle(this)">2. Light (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Refraction: laws; effect on speed, wavelength, frequency; refractive index μ = c/V; V = fλ; glass block; lateral displacement; real and apparent depth; apparent bending of sticks</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Total internal reflection: critical angle μ = 1/sin C; right-angle prism (δ = 90° and 180°); comparison with plane mirror</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Lenses: converging and diverging; ray diagrams for all positions; sign convention; lens formula (no derivation); power; magnifying glass (ray diagram only)</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#7b3fa8;font-weight:700">›</span>Prism and dispersion; electromagnetic spectrum (names in order of wavelength); infrared and ultraviolet; blue colour of sky (scattering)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card phys">
+    <div class="section-title" onclick="toggle(this)">3. Sound (Class X) | 4. Electricity & Magnetism (Class X) | 5. Heat | 6. Modern Physics <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>3. Sound (Class X)</h4>
+        <ul>
+          <li>Echoes: production, condition, numerical problems; uses (bats, dolphins, SONAR)</li>
+          <li>Natural, damped, forced vibrations; resonance</li>
+          <li>Loudness, intensity, pitch, quality; sound level in dB; noise pollution</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>4. Electricity and Magnetism (Class X)</h4>
+        <ul>
+          <li>Ohm's Law (V = IR); emf, pd, resistance, charge; ohmic and non-ohmic; specific resistance; superconductors; resistances in series and parallel (derived)</li>
+          <li>Electrical energy W = QV = VIt = I²Rt = V²t/R; power P = VI = I²R = V²/R; units; kWh; household consumption</li>
+          <li>House wiring (ring system); live/neutral/earth (3 wires); fuse/MCB; two-way switch; staircase wiring; earthing; colour coding; 3-pin plug and socket; safety precautions</li>
+          <li>Magnetic effect of current: Oersted's experiment; right-hand thumb rule; field due to a loop; electromagnets; Fleming's Left Hand Rule; DC motor (sketch and description)</li>
+          <li>Electromagnetic induction; Fleming's Right Hand Rule; AC generator; AC over DC advantages; transformer types, characteristics, uses</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>5. Heat (Class X)</h4>
+        <ul>
+          <li>Calorimetry: specific heat capacity C = Q/(mΔT); thermal capacity C' = Q/ΔT; method of mixtures; consequences of high specific heat of water</li>
+          <li>Latent heat; specific latent heat of fusion; heating curve; change of state</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>6. Modern Physics</h4>
+        <ul>
+          <li>Radioactivity: nuclear structure; atomic number Z, mass number A; α, β, γ – nature, properties, changes in nucleus; one example each of α and β decay</li>
+          <li>Radioactive isotopes – uses; harmful effects; safety precautions; background radiation; X-rays; nuclear energy – safe disposal</li>
+          <li>Nuclear fission and fusion – basic introduction and equations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- MATHEMATICS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="mathematics">
+  <div class="subject-header math">
+    <div class="subject-icon">📐</div>
+    <div>
+      <h2>Mathematics (51)</h2>
+      <p>ICSE 2027 &nbsp;|&nbsp; Classes IX & X</p>
+    </div>
+    <div class="subject-code">Code 51</div>
+  </div>
+
+  <div class="class-tabs"><span class="class-label class-ix">Class IX</span></div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 3 Hours</div>
+    <div>Internal Assessment: <strong>20 Marks</strong></div>
+    <div><em>Logarithmic and Trigonometric tables may be used</em></div>
+  </div>
+
+  <div class="section-card math-s">
+    <div class="section-title" onclick="toggle(this)">1. Pure Arithmetic – Rational & Irrational Numbers <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#c8400a;font-weight:700">›</span>Rational and irrational numbers as real numbers; place in number system</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#c8400a;font-weight:700">›</span>Surds; rationalization of denominators; simplifying expressions</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#c8400a;font-weight:700">›</span>Representation on number line</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#c8400a;font-weight:700">›</span>Proofs of irrationality of √2, √3, √5</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card math-s">
+    <div class="section-title" onclick="toggle(this)">2. Commercial Mathematics – Compound Interest <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#c8400a;font-weight:700">›</span>CI as repeated SI computation; A = P(1 + r/100)ⁿ; CI = A − P</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#c8400a;font-weight:700">›</span>Interest compounded half-yearly; finding A, P, r, n, CI, SI given other quantities</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#c8400a;font-weight:700">›</span>Difference between CI and SI; rate of growth and depreciation</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card math-s">
+    <div class="section-title" onclick="toggle(this)">3. Algebra (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i) Expansions</h4>
+        <ul>
+          <li>(a ± b)², (a ± b)³, (x ± a)(x ± b), (a ± b ± c)²</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(ii) Factorisation</h4>
+        <ul>
+          <li>a² − b², a³ ± b³, ax² + bx + c (splitting middle term)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iii–v) Equations, Indices, Logarithms</h4>
+        <ul>
+          <li>Simultaneous linear equations in two variables: elimination, substitution, cross multiplication</li>
+          <li>Indices: positive, fractional, negative, zero indices; laws of exponents</li>
+          <li>Logarithms: log form vs exponential form; laws of logarithms; expansion of expressions using logs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card math-s">
+    <div class="section-title" onclick="toggle(this)">4. Geometry (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i) Triangles</h4>
+        <ul>
+          <li>Congruency: SSS, SAS, AAS, RHS</li>
+          <li>Angles opposite equal sides (and converse); inequalities in triangles; triangle inequality</li>
+          <li>Mid-Point Theorem (proof and applications); Equal Intercept Theorem</li>
+          <li>Pythagoras Theorem – area-based proof and applications (and converse)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(ii) Rectilinear Figures</h4>
+        <ul>
+          <li>Parallelogram theorems (opposite sides, angles, diagonals bisect each other); rhombus, rectangle, square properties</li>
+          <li>Constructions: quadrilaterals (including parallelograms, rhombus) and regular hexagon</li>
+          <li>Area theorems: parallelograms on same base/between same parallels; triangle as half parallelogram; equal-base equal-area</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iii) Circle</h4>
+        <ul>
+          <li>Chord properties: perpendicular from centre bisects chord; equal chords equidistant from centre; one circle through three non-collinear points</li>
+          <li>Arc and chord properties: equal arcs subtend equal angles (and converse)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card math-s">
+    <div class="section-title" onclick="toggle(this)">5. Statistics | 6. Mensuration | 7. Trigonometry | 8. Co-ordinate Geometry (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>5. Statistics (Class IX)</h4>
+        <ul>
+          <li>Raw, arrayed, grouped data; tally-marks; discrete and continuous variables</li>
+          <li>Mean and median of ungrouped data</li>
+          <li>Class intervals, boundaries, frequency tables; grouped frequency distributions; frequency polygon</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>6. Mensuration (Class IX)</h4>
+        <ul>
+          <li>Area and perimeter of triangle (including Heron's formula) and all types of quadrilaterals</li>
+          <li>Circle: area and circumference; inner and outer area problems</li>
+          <li>3D solids: cube and cuboid – surface area, volume, cost, open/closed</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>7. Trigonometry (Class IX)</h4>
+        <ul>
+          <li>Trigonometric ratios: sin, cos, tan and their reciprocals</li>
+          <li>Standard angles: 0°, 30°, 45°, 60°, 90°; evaluation of expressions</li>
+          <li>Simple 2D problems with one right-angled triangle</li>
+          <li>Complementary angles: sin A = cos(90−A), tan A = cot(90−A), etc.</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>8. Co-ordinate Geometry (Class IX)</h4>
+        <ul>
+          <li>Cartesian system; ordered pairs; plotting points; solving simultaneous equations graphically</li>
+          <li>Distance formula</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class X Maths -->
+  <div class="class-tabs" style="margin-top:30px"><span class="class-label class-x">Class X</span></div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 3 Hours</div>
+    <div>Internal Assessment: <strong>20 Marks</strong></div>
+  </div>
+
+  <div class="section-card math-s">
+    <div class="section-title" onclick="toggle(this)">1. Commercial Mathematics (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#c8400a;font-weight:700">›</span>GST: computation including discounts, list price, profit/loss, SGST, CGST; inverse cases</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#c8400a;font-weight:700">›</span>Banking – Recurring Deposit: I = P·n(n+1)/(2×12) × r/100; MV = P×n + I</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#c8400a;font-weight:700">›</span>Shares and Dividends: face/nominal/market value; dividend; rate of dividend; premium; income = shares × rate × FV; return = (income/investment) × 100</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card math-s">
+    <div class="section-title" onclick="toggle(this)">2. Algebra (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(i–iii) Inequations, Quadratic Equations, Ratio and Proportion</h4>
+        <ul>
+          <li>Linear inequations in one unknown (N, W, Z, R); algebraic solution; number line representation</li>
+          <li>Quadratic equations: nature of roots (discriminant b²−4ac); solving by factorisation and formula; word problems</li>
+          <li>Proportion: continued proportion, mean proportion; componendo, dividendo, alternendo, invertendo; direct applications</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(iv–vii) Polynomials, Matrices, AP/GP, Co-ordinate Geometry</h4>
+        <ul>
+          <li>Factor Theorem, Remainder Theorem; factorising polynomial up to degree 3</li>
+          <li>Matrices: order; row/column matrices; null and identity matrices; compatibility for addition and multiplication; 2×2 matrix addition, subtraction, multiplication by scalar and matrix</li>
+          <li>AP and GP: general term; sum of first n terms; applications</li>
+          <li>Reflection: in x=0, y=0, x=a, y=a, origin; invariant points</li>
+          <li>Section formula (internal), midpoint formula, centroid; slope; equation of a line (slope-intercept y=mx+c, two-point form); parallel and perpendicular conditions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card math-s">
+    <div class="section-title" onclick="toggle(this)">3. Geometry (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>(a) Similarity</h4>
+        <ul>
+          <li>Similarity as size transformation; conditions SSS, SAS, AA; Basic Proportionality Theorem</li>
+          <li>Areas of similar triangles ∝ squares of corresponding sides; maps and models applications</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(b) Loci</h4>
+        <ul>
+          <li>Fixed distance from point (circle); equidistant from two intersecting lines (angle bisector); equidistant from two points (perpendicular bisector)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>(c) Circles</h4>
+        <ul>
+          <li>Angle in a semicircle; angles in same segment; arc subtends double angle at centre</li>
+          <li>Cyclic quadrilateral: opposite angles supplementary; exterior angle = opposite interior angle</li>
+          <li>Tangent perpendicular to radius; two tangents from external point equal; intersecting chords (internal/external); tangent-chord angle = angle in alternate segment</li>
+          <li>Constructions: tangent from external point; circumscribing/inscribing circle on triangle and regular hexagon</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card math-s">
+    <div class="section-title" onclick="toggle(this)">4. Mensuration | 5. Trigonometry | 6. Statistics | 7. Probability (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>4. Mensuration (Class X)</h4>
+        <ul>
+          <li>Right circular cylinder, cone and sphere: total surface area, curved surface area, volume</li>
+          <li>Cost, inner and outer volume; melting and recasting; combination of solids (frustum not included)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>5. Trigonometry (Class X)</h4>
+        <ul>
+          <li>Identities: sin²A + cos²A = 1; 1 + tan²A = sec²A; 1 + cot²A = cosec²A</li>
+          <li>Heights and distances: 2D problems with angles of elevation and depression (max two right-angled triangles)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>6. Statistics (Class X)</h4>
+        <ul>
+          <li>Mean (direct, short-cut, step-deviation methods), median, mode for raw, arrayed and grouped data</li>
+          <li>Histograms; Less than Ogive; mode from histogram; quartiles, median, inter-quartile range from ogive</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>7. Probability (Class X)</h4>
+        <ul>
+          <li>Random experiments, sample space, events; definition of probability; simple problems on single events</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- GEOGRAPHY -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="geography">
+  <div class="subject-header geo">
+    <div class="subject-icon">🌍</div>
+    <div>
+      <h2>H.C.G. (50) – Geography</h2>
+      <p>H.C.G. Paper 2 &nbsp;|&nbsp; ICSE 2027</p>
+    </div>
+    <div class="subject-code">Code 50</div>
+  </div>
+
+  <div class="class-tabs"><span class="class-label class-ix">Class IX – Principles of Geography</span></div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 2 Hours</div>
+    <div>Internal Assessment: <strong>20 Marks</strong></div>
+  </div>
+
+  <div class="section-card geo">
+    <div class="section-title" onclick="toggle(this)">1. Our World <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2a7a8a;font-weight:700">›</span>Shape of the earth; conditions supporting life</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2a7a8a;font-weight:700">›</span>Latitudes: concept, main latitudes, degrees, parallels and uses</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2a7a8a;font-weight:700">›</span>Longitudes: Prime Meridian; local, standard, GMT time zones; IDL; Eastern and Western hemispheres; calculation of time</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2a7a8a;font-weight:700">›</span>Great circles and uses</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2a7a8a;font-weight:700">›</span>Rotation: direction, speed, effects (day/night, sunrise direction, Coriolis effect); Revolution: effects (variation in day length, seasons, equinoxes, solstices)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card geo">
+    <div class="section-title" onclick="toggle(this)">2. Structure of the Earth <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <ul class="topic-group" style="list-style:none">
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2a7a8a;font-weight:700">›</span>Core, mantle, crust – meaning, extent, composition</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2a7a8a;font-weight:700">›</span>Landforms: Mountains (fold, residual, block); Plateaus (intermont, volcanic); Plains (structural, depositional) – definition, types, formation; examples from world and India</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2a7a8a;font-weight:700">›</span>Rocks: minerals vs rocks; igneous, sedimentary, metamorphic – characteristics, formation; rock cycle</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2a7a8a;font-weight:700">›</span>Volcanoes: types (active, dormant, extinct); effects (constructive and destructive); major volcanic zones</li>
+        <li style="padding:4px 0 4px 18px;position:relative;border-bottom:1px dotted #eee"><span style="position:absolute;left:4px;color:#2a7a8a;font-weight:700">›</span>Earthquakes: causes, measurement, effects; earthquake zones of world</li>
+        <li style="padding:4px 0 4px 18px;position:relative"><span style="position:absolute;left:4px;color:#2a7a8a;font-weight:700">›</span>Weathering (physical, chemical, biological) and Denudation; river stages (V-valley, waterfall, meander, delta); wind (deflation hollows, sand dunes)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card geo">
+    <div class="section-title" onclick="toggle(this)">3. Hydrosphere | 4. Atmosphere | 5. Pollution (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>3. Hydrosphere</h4>
+        <ul>
+          <li>Meaning of hydrosphere; tides – formation and pattern</li>
+          <li>Ocean currents: circulation pattern and effects; Gulf Stream, North Atlantic Drift, Labrador Current, Kuro Shio, Oya Shio</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>4. Atmosphere</h4>
+        <ul>
+          <li>Composition and structure: Troposphere, Stratosphere, Ionosphere, Exosphere; ozone depletion; global warming</li>
+          <li>Insolation: meaning; factors affecting temperature (latitude, altitude, distance from sea, slope, winds, ocean currents)</li>
+          <li>Atmospheric pressure and winds: major pressure belts; Coriolis effect; permanent (Trades, Westerlies, Polar Easterlies), periodic (land/sea breezes, monsoons), local (Loo, Chinook, Foehn, Mistral), variable (cyclones, anticyclones) winds; Jet streams</li>
+          <li>Humidity: relative and absolute; condensation (clouds, dew, frost, fog, mist); precipitation (rain, snow, hail); types of rainfall (orographic, convectional, cyclonic/frontal)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>5. Pollution (Class IX)</h4>
+        <ul>
+          <li>Types: air, water (fresh and marine), soil, radiation, noise</li>
+          <li>Sources: noise (traffic, factories), air (vehicular, industrial, garbage burning), water (domestic, industrial), soil (fertilizers, biomedical, pesticides), radiation (X-rays, nuclear)</li>
+          <li>Effects on environment and human health; preventive measures: carpools, public transport, no-smoking zones, fossil fuel restrictions, organic farming</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card geo">
+    <div class="section-title" onclick="toggle(this)">6. Natural Regions of the World | 7. Map Work (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>6. Natural Regions</h4>
+        <ul>
+          <li>Location, area, climate, natural vegetation and human adaptation of: Equatorial, Tropical Grasslands, Tropical Deserts, Tropical Monsoon, Mediterranean, Temperate Grasslands, Taiga, Tundra</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>7. Map Work (Class IX – World Outline Map)</h4>
+        <ul>
+          <li>Natural regions (8 regions listed above)</li>
+          <li>Oceans, seas, gulfs, straits: all Major Oceans, Caribbean Sea, North Sea, Black Sea, Caspian Sea, South China Sea, Mediterranean Sea, Gulf of Carpentaria, Hudson Bay, Persian Gulf, Gulf of Mexico, Gulf of Guinea, Bering Strait, Strait of Gibraltar, Strait of Malacca</li>
+          <li>Rivers: Mississippi, Colorado, Amazon, Paraguay, Nile, Zaire, Niger, Zambezi, Orange, Rhine, Volga, Danube, Murray, Darling, Hwang Ho, Yangtse Kiang, Ob, Indus, Ganga, Mekong, Irrawaddy, Tigris, Euphrates</li>
+          <li>Mountains: Rockies, Andes, Appalachian, Alps, Himalayas, Pyrenees, Scandinavian Highlands, Caucasus, Atlas, Drakensberg, Khinghan, Zagros, Urals, Great Dividing Range</li>
+          <li>Plateaus: Canadian Shield, Tibetan Plateau, Brazilian Highlands, Patagonian Plateau, Iranian Plateau, Mongolian Plateau</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class X Geography -->
+  <div class="class-tabs" style="margin-top:30px"><span class="class-label class-x">Class X – Geography of India</span></div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 2 Hours</div>
+    <div>Internal Assessment: <strong>20 Marks</strong></div>
+  </div>
+
+  <div class="section-card geo">
+    <div class="section-title" onclick="toggle(this)">Part I – Map Work (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group">
+        <h4>1. Topographical Maps</h4>
+        <ul>
+          <li>4-figure and 6-figure grid references; contour definition and contour interval</li>
+          <li>Landforms from contours (steep/gentle slope, hill, ridge, escarpment); triangulated height, spot height, relative height/depth</li>
+          <li>Colour tints and conventional symbols (Survey of India)</li>
+          <li>Types of scale (statement, RF, linear scale); measuring distances; calculating area (full grid squares)</li>
+          <li>Eight cardinal directions; settlement and land use identification; drainage patterns (dendritic, trellised, radial) and direction of flow; settlement patterns (clustered, dispersed)</li>
+        </ul>
+      </div>
+      <div class="topic-group">
+        <h4>2. Map of India (6 marking + 4 identification)</h4>
+        <ul>
+          <li><em>Mountains/Peaks/Plateaus (to mark):</em> Himalayas, Karakoram, Aravali, Vindhyas, Satpura, W & E Ghats, Nilgiris, Khasi, K2, Kanchenjunga, Deccan Plateau, Chota Nagpur Plateau</li>
+          <li><em>Plains (to mark):</em> Gangetic Plains; Konkan, Malabar, Coromandel, Northern Circars</li>
+          <li><em>Desert (to mark):</em> Thar</li>
+          <li><em>Rivers (to identify):</em> Indus, Ravi, Beas, Chenab, Jhelum, Satluj, Ganga, Yamuna, Ghaghra, Gomti, Gandak, Kosi, Chambal, Betwa, Brahmaputra, Narmada, Tapti, Mahanadi, Godavari, Krishna, Cauveri</li>
+          <li><em>Water bodies (to mark):</em> Gulf of Kutch, Gulf of Khambhat, Gulf of Mannar, Palk Strait, Andaman Sea, Wular Lake</li>
+          <li><em>Passes, Lat/Long, Winds, Minerals, Soils, Cities:</em> Karakoram Pass; Tropic of Cancer, 82°30'E; SW Monsoons (Arabian Sea + Bay of Bengal), NE Monsoons, Western Disturbances; Oil (Mumbai High, Digboi), Iron (Singhbhum), Coal (Jharia); Alluvial, Black, Red soils; Delhi, Mumbai, Kolkata, Chennai, Hyderabad, Bengaluru, Kochi, Allahabad; Dense/sparse population distribution</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card geo">
+    <div class="section-title" onclick="toggle(this)">Part II – Geography of India (Chapters 3–11) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group"><h4>3. Climate</h4>
+        <ul><li>Temperature and rainfall distribution; factors (latitude, altitude, distance from sea, winds, Himalayas, jet streams, El Niño); monsoon mechanism; four seasons (Summer, Monsoon, Retreating Monsoon, Winter); interpretation of climate data</li></ul>
+      </div>
+      <div class="topic-group"><h4>4. Soil Resources</h4>
+        <ul><li>Types: alluvial, black, red, laterite – formation, distribution, composition, colour, texture, minerals, associated crops</li>
+        <li>Soil erosion – meaning, agents, causes; soil conservation – importance and methods</li></ul>
+      </div>
+      <div class="topic-group"><h4>5. Natural Vegetation</h4>
+        <ul><li>Importance of forests; types (tropical evergreen, tropical deciduous, tropical desert, littoral, mountain) – distribution and correlation with environment</li>
+        <li>Conservation: afforestation, reforestation, social forestry, agroforestry, Van Mahotsav</li></ul>
+      </div>
+      <div class="topic-group"><h4>6. Water Resources</h4>
+        <ul><li>Surface and ground water; need for conservation; rainwater harvesting; irrigation methods: wells, tube wells, tanks, canals, drip, sprinkler</li></ul>
+      </div>
+      <div class="topic-group"><h4>7. Mineral and Energy Resources</h4>
+        <ul><li>Iron ore, Manganese, Copper, Bauxite – uses and distribution (two leading states)</li>
+        <li>Conventional: Coal, Petroleum, Natural gas – distribution, advantages, disadvantages</li>
+        <li>Hydel power: Bhakra Nangal Dam and Hirakud Projects</li>
+        <li>Non-conventional: solar, wind, tidal, geothermal, nuclear, biogas – important areas, advantages, disadvantages</li></ul>
+      </div>
+      <div class="topic-group"><h4>8. Agriculture</h4>
+        <ul><li>Importance, problems, benefits; Green Revolution – meaning and impact</li>
+        <li>Types of farming: subsistence and commercial (intensive, extensive, plantation, mixed)</li>
+        <li>Agricultural seasons (rabi, kharif, zayad)</li>
+        <li>Crops – climatic conditions, soil, methods, distribution: rice, wheat, millets, pulses; sugarcane, oilseeds (groundnut, mustard, soya bean); cotton, jute, tea</li></ul>
+      </div>
+      <div class="topic-group"><h4>9. Manufacturing Industries</h4>
+        <ul><li>Importance and classification (large/small scale, mineral-based, agro-based, public/private sector)</li>
+        <li>Agro-based: Sugar, Textile (Cotton and Silk)</li>
+        <li>Mineral-based: Iron & Steel (Tata Steel, Rourkela, Vishakhapatnam); Petro Chemical; Electronics</li></ul>
+      </div>
+      <div class="topic-group"><h4>10. Transport</h4>
+        <ul><li>Roadways: Expressways, National Highways, NSEW Corridor, Golden Quadrilateral</li>
+        <li>Railways, Airways, Waterways (inland and coastal) – advantages and disadvantages of each</li></ul>
+      </div>
+      <div class="topic-group"><h4>11. Waste Management</h4>
+        <ul><li>Impact: spoilage of landscape, pollution, health hazards; global warming, acid rain, eutrophication, biomagnification, thermal pollution</li>
+        <li>Methods: segregation, dumping, composting; reduce, reuse, recycle</li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- HISTORY & CIVICS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="history">
+  <div class="subject-header hist">
+    <div class="subject-icon">🏛️</div>
+    <div>
+      <h2>H.C.G. (50) – History & Civics</h2>
+      <p>H.C.G. Paper 1 &nbsp;|&nbsp; ICSE 2027</p>
+    </div>
+    <div class="subject-code">Code 50</div>
+  </div>
+
+  <div class="class-tabs"><span class="class-label class-ix">Class IX</span></div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 2 Hours</div>
+    <div>Internal Assessment: <strong>20 Marks</strong></div>
+  </div>
+
+  <div class="section-card hist">
+    <div class="section-title" onclick="toggle(this)">Section A – Civics (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group"><h4>1. Our Constitution</h4>
+        <ul><li>Definition; date of adoption and enforcement; features: Single Citizenship, Universal Adult Franchise, Fundamental Rights, Fundamental Duties, Directive Principles (meaning)</li>
+        <li>Difference between Fundamental Rights and Directive Principles; Welfare State meaning</li></ul>
+      </div>
+      <div class="topic-group"><h4>2. Elections</h4>
+        <ul><li>Meaning; composition and functions of Election Commission of India</li>
+        <li>Direct and indirect election; General, Mid-term and By-elections</li></ul>
+      </div>
+      <div class="topic-group"><h4>3. The State Legislatures</h4>
+        <ul><li>Legislative Assembly and Legislative Council</li>
+        <li>Unicameral and Bicameral legislatures; term, composition, qualifications, powers and functions</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card hist">
+    <div class="section-title" onclick="toggle(this)">Section B – History (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group"><h4>1. The Harappan Civilisation</h4>
+        <ul><li>Sources: Great Bath, Citadel, seals, bearded man, dancing girl, dockyard, granaries, script</li>
+        <li>Urban planning, trade, art & craft, and its decline</li></ul>
+      </div>
+      <div class="topic-group"><h4>2. The Vedic Period</h4>
+        <ul><li>Sources: four Vedas, epics; Early Vedic social organisation – family, king, Sabha, Samiti, Vidhatha</li>
+        <li>Position of women (Early vs Later Vedic); economy comparison; four class divisions, four Ashramas, education system</li></ul>
+      </div>
+      <div class="topic-group"><h4>3. Jainism and Buddhism</h4>
+        <ul><li>Sources: Angas, Tripitikas, Jatakas; causes for rise in 6th century BC</li>
+        <li>Jainism: Tri-ratnas, Karma, Equality, Moksha; Buddhism: Four Noble Truths, Eightfold Path, Nirvana</li></ul>
+      </div>
+      <div class="topic-group"><h4>4. The Mauryan Empire</h4>
+        <ul><li>Sources: Arthashastra, Indika, Ashokan Edicts, Sanchi Stupa</li>
+        <li>Kings in chronological order; administration; Ashoka's Dhamma – principles and impact</li></ul>
+      </div>
+      <div class="topic-group"><h4>5. The Sangam Age</h4>
+        <ul><li>Sources: Tirukkural, Megaliths; society – position of women; economy – agriculture and trade</li></ul>
+      </div>
+      <div class="topic-group"><h4>6. The Age of the Guptas</h4>
+        <ul><li>Sources: Fa-hien's account, Allahabad Pillar Inscription</li>
+        <li>Kings in chronological order; administration; contributions: Nalanda (education), Aryabhatta (science), Sushrutha (medicine), Kalidasa/Deogarh (culture)</li></ul>
+      </div>
+      <div class="topic-group"><h4>7. Medieval India</h4>
+        <ul>
+          <li>Cholas: sources (inscriptions, Brihadishwara Temple); kings, administration, Chola art</li>
+          <li>Delhi Sultanate: sources (inscriptions, Qutab Minar); dynasties in order; Alauddin Khilji (market regulations, Deccan expedition, military and revenue reforms); Muhammad bin Tughlaq (transfer of capital, token currency, Doab taxation)</li>
+          <li>Mughal Empire: sources (Ain-i-Akbari, Taj Mahal, Jama Masjid, Red Fort); kings in order; Babur's three battles; Akbar's Rajput policy, integration steps, mansabdari system</li>
+          <li>Composite Culture: Bhakti and Sufi movements; principles, impact; Christian missionaries</li>
+        </ul>
+      </div>
+      <div class="topic-group"><h4>8. The Modern Age in Europe</h4>
+        <ul>
+          <li>Renaissance: definition, causes, impact on art/literature/science (Da Vinci, Shakespeare, Copernicus)</li>
+          <li>Reformation: causes (dissatisfaction with Church, new learning); Martin Luther; Counter-Reformation</li>
+          <li>Industrial Revolution: definition, causes of capitalism and socialism (meanings and causes)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class X History -->
+  <div class="class-tabs" style="margin-top:30px"><span class="class-label class-x">Class X</span></div>
+  <div class="marks-box">
+    <div>Written Paper: <strong>80 Marks</strong> | Duration: 2 Hours</div>
+    <div>Internal Assessment: <strong>20 Marks</strong></div>
+  </div>
+
+  <div class="section-card hist">
+    <div class="section-title" onclick="toggle(this)">Section A – Civics (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group"><h4>1. The Union Legislature</h4>
+        <ul>
+          <li>Federal setup meaning; Lok Sabha: term, composition, qualifications; parliamentary procedures (sessions, quorum, question hour – starred/unstarred/short notice, zero hour, adjournment, no-confidence motion)</li>
+          <li>Anti-Defection Law; ordinary and money bills; Speaker (election, removal, functions)</li>
+          <li>Rajya Sabha: composition, qualifications, election, term, presiding officer</li>
+          <li>Powers of Parliament: legislative, financial, judicial, electoral, constitutional amendment, executive control; exclusive powers of each house</li>
+        </ul>
+      </div>
+      <div class="topic-group"><h4>2. The Union Executive</h4>
+        <ul>
+          <li>President: qualifications, Electoral College, indirect election reason, term, impeachment; powers (executive, legislative, financial, judicial, discretionary, emergency)</li>
+          <li>Vice-President: qualifications, removal, term, powers</li>
+          <li>Prime Minister and Council of Ministers: appointment, formation, tenure, functions; collective and individual responsibility; distinction between Council of Ministers and Cabinet</li>
+        </ul>
+      </div>
+      <div class="topic-group"><h4>3. The Judiciary</h4>
+        <ul>
+          <li>Supreme Court: composition, qualifications, appointment; independence; jurisdiction (original, appellate, advisory, revisory, judicial review, court of record); fundamental rights and writs</li>
+          <li>High Courts: composition, qualifications, appointment; jurisdiction (original, appellate, revisory, judicial review)</li>
+          <li>Subordinate Courts: District Judge vs Sessions Court; Lok Adalats (meaning and advantages)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card hist">
+    <div class="section-title" onclick="toggle(this)">Section B – History (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group"><h4>1. Indian National Movement (1857–1917)</h4>
+        <ul>
+          <li>First War of Independence 1857: causes (political, socio-religious, economic, military) and consequences (administrative changes, Queen Victoria's Proclamation, army changes)</li>
+          <li>Growth of Nationalism: economic exploitation, repressive policies, socio-religious reform movements; contributions of Raja Rammohan Roy, Jyotiba Phule, Swami Dayananda Saraswathi, Swami Vivekananda (any two each)</li>
+          <li>Foundation of INC: year, founder; first two sessions and presidents</li>
+          <li>First Phase (1885–1907): Early Nationalists' objectives and methods; contributions of Naoroji, Banerjee, Gokhale (any two each)</li>
+          <li>Second Phase (1905–1916): Partition of Bengal; Surat Split 1907; Assertive Nationalists; contributions of Tilak, Bipin Chandra Pal, Lajpat Rai (any two each); Muslim League (year, factors, objectives); Lucknow Pact 1916</li>
+        </ul>
+      </div>
+      <div class="topic-group"><h4>2. Mass Phase of the National Movement (1915–1947)</h4>
+        <ul>
+          <li>Non-Cooperation Movement: causes (Khilafat, Rowlatt Act, Jallianwala Bagh), programme, suspension (Chauri Chaura), impact</li>
+          <li>Civil Disobedience Movement: causes (Simon Commission reaction, Lahore Session 1929, Poorna Swaraj), Dandi March, programme, impact, Gandhi-Irwin Pact, 2nd Round Table Conference, renewal</li>
+          <li>Quit India Movement: causes (failure of Cripps Mission, Japanese threat), resolution, significance</li>
+          <li>Forward Bloc (objectives); INA (founder, objectives, Bose's contribution)</li>
+          <li>Independence and Partition: Cabinet Mission Plan (clauses only); Mountbatten Plan (clauses and acceptance); Indian Independence Act 1947 (clauses only)</li>
+        </ul>
+      </div>
+      <div class="topic-group"><h4>3. The Contemporary World</h4>
+        <ul>
+          <li>First World War: causes (Nationalism, Imperialism, arms race, European division, Sarajevo crisis); results (Treaty of Versailles, League of Nations, its objectives)</li>
+          <li>Rise of Dictatorships: causes for Fascism in Italy and Nazism in Germany; similarities</li>
+          <li>Second World War: causes (Treaty of Versailles dissatisfaction, Fascism/Nazism, Appeasement, Japanese invasion of China, failure of League, Hitler's Poland invasion); Pearl Harbour, Hiroshima and Nagasaki; consequences (Axis defeat, UN formation, Cold War); Cold War meaning; NATO and Warsaw (meaning only)</li>
+          <li>United Nations: objectives; General Assembly, Security Council, ICJ – composition and functions; UNICEF, WHO, UNESCO – headquarters and functions</li>
+          <li>Universal Declaration of Human Rights (meaning only)</li>
+          <li>Non-Aligned Movement: meaning, objectives; Panchsheel meaning; Nehru's role; architects of NAM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PHYSICAL EDUCATION -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div id="pe">
+  <div class="subject-header pe">
+    <div class="subject-icon">🏃</div>
+    <div>
+      <h2>Physical Education (72)</h2>
+      <p>ICSE 2027 &nbsp;|&nbsp; Classes IX & X</p>
+    </div>
+    <div class="subject-code">Code 72</div>
+  </div>
+
+  <div class="marks-box">
+    <div>Theory Paper: <strong>100 Marks</strong> | Duration: 2 Hours</div>
+    <div>Internal Assessment (Practical): <strong>100 Marks</strong></div>
+    <div><em>Both Classes IX and X have identical assessment structure</em></div>
+  </div>
+
+  <!-- Class IX PE Theory -->
+  <div class="class-tabs"><span class="class-label class-ix">Class IX – Theory</span></div>
+
+  <div class="section-card pe">
+    <div class="section-title" onclick="toggle(this)">Section A – Human Anatomy and Physiology (Class IX) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group"><h4>1. Skeletal System</h4>
+        <ul>
+          <li>Bone identification: Cranium, Vertebrae, Scapula, Clavicle, Ribs, Sternum, Humerus, Radius, Ulna, Carpals, Metacarpals, Phalanges, Pelvis, Femur, Patella, Fibula, Tibia, Tarsals, Metatarsals</li>
+          <li>Functions: framework, support, movement, protection, mineral storage, blood cell production</li>
+          <li>Joint types: fixed/fibrous (skull), slightly movable/cartilaginous (knee, elbow), freely movable/synovial (wrist, ankle, shoulder, neck)</li>
+          <li>Joint movements: hinge (flexion/extension), pivot (rotation), ball and socket (flexion, extension, adduction, abduction, internal/external rotation), saddle (flexion, extension, adduction, abduction, circumduction)</li>
+          <li>Benefits of exercise on skeletal system</li>
+        </ul>
+      </div>
+      <div class="topic-group"><h4>2. Muscular System</h4>
+        <ul>
+          <li>Types: voluntary/skeletal, involuntary/smooth, cardiac; isometric and isotonic</li>
+          <li>Muscle identification: Latissimus dorsi, Deltoid, Rotator cuffs, Pectorals, Biceps, Triceps, Abdominals, Hip flexors, Gluteals, Hamstrings, Quadriceps, Gastrocnemius, Tibialis anterior</li>
+          <li>Benefits of exercise on muscular system</li>
+        </ul>
+      </div>
+      <div class="topic-group"><h4>3. Respiratory System</h4>
+        <ul>
+          <li>Pathway of air: mouth/nose → pharynx → larynx → trachea → bronchi → bronchioles → diaphragm → lungs → alveoli</li>
+          <li>Mechanics: external respiration, diffusion in alveoli, internal/cellular respiration</li>
+          <li>Oxygen debt and lactic acid accumulation (meaning only); Second wind (meaning only)</li>
+          <li>Vital capacity and tidal volume (meaning and difference)</li>
+          <li>Benefits of exercise on respiratory system</li>
+        </ul>
+      </div>
+      <div class="topic-group"><h4>4. Circulatory System</h4>
+        <ul>
+          <li>Structure of heart: left/right atria, left/right ventricles, arteries, veins, capillaries</li>
+          <li>Heart rate, stroke volume, cardiac output (meaning and difference)</li>
+          <li>Mechanism of blood circulation</li>
+          <li>Blood: composition (plasma, RBC, WBC, platelets); blood groups A, B, AB, O and Rh factor; donors and recipients; haemoglobin function; systolic and diastolic pressure</li>
+          <li>Benefits of exercise on circulatory system</li>
+        </ul>
+      </div>
+      <div class="topic-group"><h4>5. Games and Sports</h4>
+        <ul>
+          <li>Meaning and difference between games and sports</li>
+          <li>Psychological and social benefits: confidence, emotional control, competitiveness, positive attitude, winning/losing attitude, camaraderie, self-esteem, patience, resilience, cooperation, teamwork, sportsmanship, fair play, leadership, time management</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card pe">
+    <div class="section-title" onclick="toggle(this)">Section B – Games (Classes IX & X – Any 2 of 6) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <p style="margin-bottom:14px;color:var(--text-muted);font-size:13px">Candidates study any <strong>two</strong> of the following six games. All six are listed here. For each game the syllabus covers: Knowledge of the game · Rules/Laws · Fundamental skills and techniques · Terminology · National and international governing bodies · National and international tournaments.</p>
+
+      <div class="game-card">
+        <div class="game-title">🏏 Cricket</div>
+        <div class="game-body">
+          <div class="topic-group">
+            <h4>Rules</h4>
+            <ul><li>Field (diagram with measurements); Ball (shape, material, circumference, weight); Bat (length, width, material); Stumps and bails; 11 players + substitutes; Types of matches (1-day, 5-day, 4-day, T20); Officials (2 field umpires, 1 third umpire, 1 match referee, 2 scorers); ways of getting out</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Fundamental Skills</h4>
+            <ul><li>Batting: on drive, off drive, square cut, leg glance; Fielding: close catching, outfield catching, long barrier, throwing; Bowling: in swing, out swing, yorker, full toss; Wicketkeeping: footwork, catching, diving</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Key Terminology</h4>
+            <ul><li>Maiden over, hat trick, extra, dead rubber, seam bowling, over, no ball, bouncer, sight screen, bump ball, danger area, power play, overthrow, declaration, appeal, bodyline bowling, dot ball, substitute, dead ball, ball-tampering, century, follow-on, golden duck, nick, nightwatchman, tail ender, innings defeat, cover drive, innings, straight drive, sweep shot, hook shot, reverse sweep, upper cut, late cut, leg glance, pull shot, flick shot, beamer, off cutter, leg cutter, short pitch, full length delivery, reverse swing</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Governing Bodies & Tournaments</h4>
+            <ul><li>BCCI, ICC; Ranji Trophy, Duleep Trophy, Vijay Hazare Trophy, Deodhar Trophy, Irani Trophy, IPL; ICC Cricket World Cup, ICC Champions Trophy, ICC World T20, World Cricket League</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-title">⚽ Football</div>
+        <div class="game-body">
+          <div class="topic-group">
+            <h4>Laws of the Game</h4>
+            <ul><li>Field (diagram with measurements, goalpost, corner flags); Ball; Players (11 + substitutes, substitution procedure); Referee (powers, duties, signals); Assistant referees, 4th official, AAR, RAR; Duration (periods, halftime, time lost, penalty kick, abandoned match); Start/restart: kick-off, free kicks (direct/indirect), penalty kicks, throw-in, goal kicks, corner kicks; Ball in/out of play; Offside; Fouls and misconduct (yellow/red card); Determining outcome (penalty shootout)</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Fundamental Skills</h4>
+            <ul><li>Passing (short/long); Trapping (step, inside, thigh, chest, head); Shooting (instep, swerve, chip, toe punt); Dribbling; Receiving; Heading; Tackle; Goalkeeping</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Key Terminology</h4>
+            <ul><li>Advantage, zonal marking, sliding tackle, through pass, quarter circle, man-to-man marking, additional time, extra time, nutmeg, one-on-one, step over, technical area, volley, half volley, attacker, defender, chip, cross, overlap, lob, banana kick, bicycle kick, wall pass, GLT</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Governing Bodies & Tournaments</h4>
+            <ul><li>AIFF, FIFA, IFAB; Santosh Trophy, Subroto Cup, Federation Cup, Durand Cup, I-League; FIFA World Cup, UEFA European Championship, AFC Cup</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-title">🏑 Hockey</div>
+        <div class="game-body">
+          <div class="topic-group">
+            <h4>Rules</h4>
+            <ul><li>Field (diagram with measurements); Composition (substitution for field players and goalkeepers); Captains; Uniform and equipment; Duration and result; Start (centre pass) and restart (bully, free hit); Ball out of field; Method of scoring; Conduct of play; Penalties (free hit, penalty corner, penalty stroke, procedures); Personal penalties (Green card 2 min, Yellow card 5 min, Red card)</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Equipment & Skills</h4>
+            <ul><li>Goal-post, flag post, hockey stick (spec and properties), ball (shape, material, weight)</li>
+            <li>Passing: push, drive, sweep; Trap: upright and flat stop; Dribbling: straight, loose, Indian, pull-back, one-hand; Shooting; Goalkeeping</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Key Terminology</h4>
+            <ul><li>Forehand, playing distance, tackle, back stick, dangerous play, field goal, obstruction, raised ball, high stick, hooking, reverse stick, push, scoop, advantage flick, shooting circle, undercutting, jab, foot, give-and-go, centre pass, back pass, reverse hit, rebound, rusher, long corner, through pass, stroke, cross, 16-yard hit</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Governing Bodies & Tournaments</h4>
+            <ul><li>FIH, IHF; All India Gurmeet Memorial HT, Chhatrapati Shivaji HT, Indira Gold Cup HT; Sultan Azlan Shah, World Hockey Cup, Champions Trophy</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-title">🏀 Basketball</div>
+        <div class="game-body">
+          <div class="topic-group">
+            <h4>Rules and Regulations</h4>
+            <ul><li>Court (diagram, dimensions, areas, scorer's table); Teams; Captain/Coach duties; Duration; Ball status (live/dead); Jump ball and alternating possession; Control of ball; Goal (value, scoring rule); Throw-in, time-out, substitution; Violations; Dribbling; Travelling; Closely guarded; 3-second, 8-second, 24-second rules; Goaltending; Fouls (personal, double, technical, unsportsmanlike, disqualifying); Fighting; Contact principles; Free throws; Officials (referee, scorer, timer, shot-clock operator)</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Fundamental Skills</h4>
+            <ul><li>Dribbling (high, change of pace, crossover, between legs, behind back); Passing (chest, bounce, baseball, outlet, no-look); Shooting (layup, jump shot, hook shot, free throw, bank shot, slam dunk); Defence (man-to-man, zone, combination); Offence (early, set, motion, zone, spread); Rebounding; Pivot</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Governing Bodies & Tournaments</h4>
+            <ul><li>BFI, FIBA; Youth National BC Championship, Federation Cup BC Championship, UBA Pro Basketball League; FIBA World Championship, European BC Championship, FIBA Asia Championship</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-title">🏐 Volleyball</div>
+        <div class="game-body">
+          <div class="topic-group">
+            <h4>Rules</h4>
+            <ul><li>Play area, net, antenna, posts (diagrams with measurements); Ball; Composition; Equipment; Team leaders; Scoring (point, set, match); Structure of play (toss, positions, rotation); Ball states; Playing the ball (team hits, faults, ball at/crossing net); Player at net; Service (rules, faults); Attack hit; Block; Interruptions, delays, time-outs; Substitution; Libero player; Misconduct (warning-yellow, penalty-red, expulsion, disqualification); Referees (1st, 2nd, scorer, line judges)</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Fundamental Skills</h4>
+            <ul><li>Service: underhand, topspin, float, jump serve, jump float; Pass: underarm, overhand; Set: overhead, bump; Attack/spike: backcourt, line, cross-court, dip, block-abuse, off-speed, quick, slide, double-quick; Block: single, double, triple; Dig</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Governing Bodies & Tournaments</h4>
+            <ul><li>VFI, FIVB; Indian Volleyball League, Federation Cup, Poornima Trophy; World Championship, World Cup Volleyball, Super Challenge Cup</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-title">🏸 Badminton</div>
+        <div class="game-body">
+          <div class="topic-group">
+            <h4>Rules</h4>
+            <ul><li>Court (diagram, measurements, posts, net); Shuttle (dimensions, speed test); Racket (diagram, measurements); Toss procedure; Scoring system; Change of ends; Service (singles and doubles – serving/receiving courts, order of play, sequence); Service court errors; Lets; Shuttle not in play; Misconduct and penalties; Officials (referee, umpire, service judge, line judges)</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Fundamental Skills</h4>
+            <ul><li>Grip (forehand, backhand); Footwork; Serve: high, low, flick; Strokes: overhead forehand, overhead backhand, underarm forehand, underarm backhand; Shots: clearing/lobbing, drop shots, smash</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Key Terminology</h4>
+            <ul><li>Short serve, long serve, wide serve, service order, love, all, deuce, forecourt, mid-court, rear court, rally, set, rubber, lunge, clear lob, half smash, full smash, carry, baseline smash, drive, push shot, tumbling net shot, net kill, net lift, hairpin net shot, alley, back alley, follow through, court, wood shot, flick, bird, singles footwork base</li></ul>
+          </div>
+          <div class="topic-group">
+            <h4>Governing Bodies & Tournaments</h4>
+            <ul><li>BAI, BWF; Indian Open Badminton Championship, Senior National Badminton Championship; World Championship, Thomas Cup</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class X PE Theory -->
+  <div class="class-tabs" style="margin-top:30px"><span class="class-label class-x">Class X – Theory (Section A)</span></div>
+
+  <div class="section-card pe">
+    <div class="section-title" onclick="toggle(this)">Class X Section A – Additional Theory Topics <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="topic-group"><h4>1. Human Growth and Development</h4>
+        <ul><li>Meaning of growth and development; stages: Infancy (0–5), Childhood (5–12), Adolescence (12–19), Adulthood (19–65+)</li>
+        <li>Factors influencing growth: hereditary, environmental, gender, nationality, nutrition</li></ul>
+      </div>
+      <div class="topic-group"><h4>2. Physical Education</h4>
+        <ul><li>Meaning; objectives: physical, psychological, social, emotional development</li></ul>
+      </div>
+      <div class="topic-group"><h4>3. Body Types</h4>
+        <ul><li>Endomorph, Mesomorph, Ectomorph</li></ul>
+      </div>
+      <div class="topic-group"><h4>4. Physical Fitness</h4>
+        <ul><li>Meaning and importance; components: cardiovascular/respiratory endurance, stamina, strength, flexibility, power, speed, coordination, agility, balance, accuracy</li>
+        <li>Factors affecting: hereditary, nutrition, environment, training, illness, self-motivation, emotional stability, lifestyle, posture</li></ul>
+      </div>
+      <div class="topic-group"><h4>5. Sports Training</h4>
+        <ul><li>Meaning; importance and objectives</li>
+        <li>Principles: individuality, specificity, progression, overload, adaptation, recovery, reversibility, variance, frequency, continuity, active participation, periodization, intensity</li></ul>
+      </div>
+      <div class="topic-group"><h4>6. Safety in Sports</h4>
+        <ul><li>Sports injuries: muscle strain, torn ACL, torn MCL, shin splints, stress fracture, fracture, plantar fasciitis, sprained ankle, tennis elbow, low back pain, hip bursitis, concussion, Achilles tendonitis, runner's knee – first aid for each</li>
+        <li>Prevention: warm-up/cool-down, fitness, correct equipment, knowledge of rules, protective gear, rest, supervision, proper training, safe facilities</li></ul>
+      </div>
+      <div class="topic-group"><h4>7. Health Education</h4>
+        <ul><li>Meaning and importance; nutrition (balanced diet: carbohydrates, proteins, fats, vitamins, minerals, water, fibre); malnutrition (under- and over-nutrition)</li>
+        <li>Dietary modification for sportspersons; meal planning for various physical activities with sample menus</li></ul>
+      </div>
+      <div class="topic-group"><h4>8. Careers in Physical Education</h4>
+        <ul><li>Coach, PE teachers, professional sportsperson, sports management, commentators, officials</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Internal Assessment PE -->
+  <div class="section-card pe">
+    <div class="section-title" onclick="toggle(this)">Internal Assessment – Practical Work (Class X) <span class="arrow">▼</span></div>
+    <div class="section-body open">
+      <div class="marks-box">
+        <div>Teacher Assessment: <strong>50 Marks</strong></div>
+        <div>External Examiner: <strong>50 Marks</strong></div>
+        <div>Total: <strong>100 Marks</strong></div>
+      </div>
+      <div class="topic-group"><h4>1. Work Assessed by Teachers (50 marks)</h4>
+        <ul>
+          <li>Achievement of skills/performance: <strong>30 marks</strong></li>
+          <li>Attendance: <strong>5 marks</strong></li>
+          <li>Participation in voluntary/intramural activities: <strong>10 marks</strong></li>
+          <li>Representation (inter-school, district, state): <strong>5 marks</strong></li>
+          <li>Activities (any 2 of): athletics, cricket, hockey, football, handball, volleyball, softball, basketball, tennis, badminton, swimming, dancing, gymnastics, yoga, boxing, wrestling, judo and karate, table tennis, kho-kho, kabaddi</li>
+        </ul>
+      </div>
+      <div class="topic-group"><h4>2. Work Assessed by External Examiner (50 marks)</h4>
+        <ul>
+          <li><strong>Physical Efficiency Tests (30 marks)</strong> – 6 tests over 2 days:
+            <ul class="sub-list">
+              <li>Test 1: 50 m dash (timings)</li>
+              <li>Test 2: Standing long jump (distance in cm)</li>
+              <li>Test 3: Distance run (boys 1000 m, girls 600 m)</li>
+              <li>Test 4: Push-ups (boys: floor push-ups; girls: bench push-ups)</li>
+              <li>Test 5: Shuttle run (10 m course, two wooden blocks)</li>
+              <li>Test 6: 30-second sit-ups</li>
+            </ul>
+          </li>
+          <li><strong>Specialization Tests (20 marks)</strong> – candidate chooses 1 activity:
+            <ul class="sub-list">
+              <li>Athletics: 2 events from track (boys: 100/200/400/800/1500 m; girls: 50/100/200/800 m) and/or field events</li>
+              <li>Gymnastics: 4 exercises on any 2 apparatus (ground work, balance beam, parallel bars, vaulting horse, horizontal bar)</li>
+              <li>Swimming: 2 events of choice (freestyle, breast stroke, backstroke, butterfly, diving)</li>
+              <li>Dancing: 2 performances (Indian classical, folk, Western – ballet, ballroom, pop)</li>
+              <li>Yoga: 4 asanas nominated by External Examiner from: Ugrasam, Dhamrekhasan, Singhasan, Ultanmandhukasan, Kukutasans, Naunli, Kapala, Bhathi, Shavasan, Shirashasan, Shalabhasan, Bakasan, Mayurasan</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="margin-top:60px;padding:30px;background:white;border-top:2px solid var(--border);text-align:center;border-radius:var(--radius)">
+  <p style="color:var(--text-muted);font-size:13px">ICSE Examination Year 2027 &nbsp;|&nbsp; Council for the Indian School Certificate Examinations (CISCE), New Delhi</p>
+  <p style="color:var(--text-muted);font-size:12px;margin-top:6px">© Copyright — CISCE. All rights reserved. This compilation is for educational reference only.</p>
+  <p style="color:var(--text-muted);font-size:12px;margin-top:4px">Subjects covered: Biology (52) · Chemistry (52) · Physics (52) · Mathematics (51) · Geography (50) · History & Civics (50) · Physical Education (72)</p>
+</div>
+
+</div><!-- /container -->
+
+<script>
+function toggle(el) {
+  el.classList.toggle('open');
+  const body = el.nextElementSibling;
+  body.classList.toggle('open');
+}
+// Open all sections by default for printing / first view
+document.querySelectorAll('.section-title').forEach(t => {
+  const body = t.nextElementSibling;
+  if (body) body.classList.add('open');
+  t.classList.add('open');
+});
+</script>
+
+</body>
+</html>
